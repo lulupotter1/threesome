@@ -145,25 +145,28 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             ),
             const SizedBox(height: 20),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextButton(
-                  onPressed: () {
-                    AutoRouter.of(context).replaceNamed("/");
-                    // CoreBlocs.weather.add()
-                  },
-                  child: const Text(
-                    "Weather Screen",
-                    style: TextStyle(fontSize: 30),
+                Expanded(
+                  child: TextButton(
+                    onPressed: () {
+                      AutoRouter.of(context).replaceNamed("/");
+                      // CoreBlocs.weather.add()
+                    },
+                    child: const Text(
+                      "Weather Screen",
+                      style: TextStyle(fontSize: 30),
+                    ),
                   ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    AutoRouter.of(context).replaceNamed("/firstScreen");
-                  },
-                  child: const Text(
-                    "First Screen",
-                    style: TextStyle(fontSize: 30),
+                Expanded(
+                  child: TextButton(
+                    onPressed: () {
+                      AutoRouter.of(context).replaceNamed("/firstScreen");
+                    },
+                    child: const Text(
+                      "First Screen",
+                      style: TextStyle(fontSize: 30),
+                    ),
                   ),
                 ),
               ],
